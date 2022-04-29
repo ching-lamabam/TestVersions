@@ -41,6 +41,10 @@ public class VersionsDiffTest {
 		assertEquals(1, diff);
 		diff = versionDiff.checkVersions("1.31", "1.5");
 		assertEquals(1, diff);
+		diff = versionDiff.checkVersions("1.31.3.4", "1.51");
+		assertEquals(-1, diff);
+		diff = versionDiff.checkVersions("1.31", "1.31");
+		assertEquals(0, diff);
 	}
 
 }
