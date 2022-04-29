@@ -11,6 +11,10 @@ public class VersionsDiff {
 	/**
 	 * check version1 is greater than version2
 	 * 
+	 * version1 > version2 return 1
+	 * version1 < version2 return -1
+	 * version1 == version2 return 0
+	 *  
 	 * @param version1
 	 * @param version2
 	 * @return

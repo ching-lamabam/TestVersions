@@ -1,5 +1,21 @@
 RUN using eclipse
 
-com.myproj.version.TestVersion [ input VersionsDiff with 1st version is greater than the second version ] 
+com.myproj.version.TestVersion [ input VersionsDiff to check 1st version is greater than the second version ] 
 
+OR
 
+cd to $PROJ_DIR/src
+javac -cp . com\myproj\versions\*.java
+java com.myproj.versions.TestVersion
+
+====================================================================================================
+Output
+Test Versions
+0.1, 1.1 = -1
+1.2, 1.1 = 1
+1.2.9.9.9.9, 1.2 = 1
+1.2, 1.2.9.9.9.9 = -1
+1.3.4, 1.10 = -1
+1.31, 1.10 = 1
+,  = -1
+====================================================================================================
